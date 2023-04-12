@@ -1,0 +1,28 @@
+---
+name: 'Get Latest Release'
+description: >-
+  Get the latest release from repository
+inputs:
+  owner:
+    description: 'The Github user or organization that owns the repository'
+    required: false
+  repo:
+    description: 'The repository name'
+    required: false
+  repository:
+    description: 'The repository name in full'
+    required: false
+  token:
+    description: 'The GitHub token or personal access token'
+    required: false
+  version:
+    description: 'The version to compare'
+    required: false
+outputs:
+  release:
+    description: 'Latest release name'
+  compare:
+    description: 'The result between versions'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
